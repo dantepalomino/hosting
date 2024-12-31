@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masajes - Clases</title>
     <style>
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.8; /* Ajusta la opacidad del video de fondo */
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -19,6 +30,15 @@
 
         h1 {
             margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #ffffff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        h1:hover {
+            color: #aaffae;
+            transform: scale(1.1);
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .video-list {
@@ -30,19 +50,21 @@
         }
 
         .video-item {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3); /* Baja la opacidad del fondo blanco */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-        .video-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1); /* Restaura la opacidad del fondo al pasar el mouse */
+}
+
 
         .video-item a {
             text-decoration: none;
@@ -60,10 +82,29 @@
             height: 180px;
             border: none;
             border-radius: 8px;
+            opacity: 0.9; /* Ajusta la transparencia de los videos */
+            transition: opacity 0.3s;
+        }
+
+        .video-item iframe:hover {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://file.garden/Zosf2G263zPWFVUq/video%20fondo.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="https://file.garden/Zosf2G263zPWFVUq/video%20fondo.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    
+    
+
     <h1>Clases de Masajes</h1>
     <div class="video-list">
         <div class="video-item">
